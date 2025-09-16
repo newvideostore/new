@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Site — Header Demo</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --accent:#ff4757;
+      --muted:#94a3b8;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Noto Sans',sans-serif;background:#0b1220;color:#e6eef8}
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 24px;
+      background:var(--bg);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:18px}
+    .site-title{font-size:18px;font-weight:600}
+    .site-sub{font-size:12px;color:var(--muted)}
+
+    .nav{display:flex;gap:18px}
+    .nav a{color:#fff;text-decoration:none;font-size:15px;transition:0.2s}
+    .nav a:hover{color:var(--accent)}
+
+    .search-wrap{display:flex;align-items:center;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden}
+    .search-wrap input{border:0;outline:none;padding:8px 10px;background:transparent;color:#fff;min-width:200px}
+    .search-btn{border:0;background:var(--accent);color:#fff;padding:8px 14px;cursor:pointer;font-weight:600}
+
+    .actions{display:flex;align-items:center;gap:14px}
+    .upload{background:transparent;border:1px solid rgba(255,255,255,0.2);padding:8px 12px;border-radius:6px;color:#fff;cursor:pointer;transition:0.2s}
+    .upload:hover{background:rgba(255,255,255,0.1)}
+
+    .avatar{width:36px;height:36px;border-radius:50%;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+
+    @media(max-width:800px){
+      .nav{display:none}
+      .search-wrap input{min-width:100px}
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">V</div>
+    <div>
+      <div class="site-title">VideoHub</div>
+      <div class="site-sub">Watch • Upload • Share</div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">Trending</a>
+    <a href="#">Categories</a>
+    <a href="#">Live</a>
+    <a href="#">Channels</a>
+  </nav>
+
+  <div class="actions">
+    <div class="search-wrap">
+      <input type="text" placeholder="Search videos, channels...">
+      <button class="search-btn">Search</button>
+    </div>
+    <button class="upload">+ Upload</button>
+    <div class="avatar">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop&crop=faces" alt="user">
+    </div>
+  </div>
+</header>
+
+<main style="padding:28px">
+  <h2>Header demo</h2>
+  <p style="color:var(--muted)">এই হেডারটি ভিডিও ওয়েবসাইটের জন্য — লোগো, ন্যাভ, সার্চ, আপলোড বাটন এবং ইউজার প্রোফাইল সহ।</p>
+</main>
+
+</body>
+</html>
